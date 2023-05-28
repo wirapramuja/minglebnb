@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "generate": "npx prisma generate",
+    "deploy": "npx prisma migrate deploy",
+    "dev": "npm run generate && nodemon --watch \"src/**\" --ext \"js,json\" --exec \"node src/index.js\"",
+    "build": "npm run generate",
+    "start": "npm run build && node build/index.js"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
   },
   "dependencies": {
     "@babel/runtime": "^7.22.3",
@@ -48,5 +52,6 @@
     "@types/react-date-range": "^1.4.4",
     "@types/react-select": "^5.0.1",
     "prisma": "^4.14.1"
+    
   }
 }
