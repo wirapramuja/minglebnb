@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/runtime": "^7.22.3",
     "@next-auth/prisma-adapter": "^1.0.6",
     "@prisma/client": "^4.14.1",
+    "@types/babel__plugin-transform-runtime": "^7.9.2",
     "@types/node": "20.2.4",
     "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",
@@ -21,7 +23,7 @@
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "leaflet": "^1.9.4",
-    "next": "13.4.4",
+    "next": "^13.4.1",
     "next-auth": "^4.22.1",
     "next-cloudinary": "^4.12.0",
     "postcss": "8.4.23",
